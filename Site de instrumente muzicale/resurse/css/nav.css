@@ -1,0 +1,157 @@
+body{
+    --inaltime-meniu:30px;
+    --latime-buton:16.6%;
+    --culoare-meniu: lightgray;
+    --culoare-meniu-selectat:#83fa6e;
+    --latime-bord-meniu:1px;
+}
+
+ul.meniu{
+    display:flex;
+    padding:0;
+    margin:0;
+    list-style-type: none;
+}
+ul.meniu li a{
+    display:block;
+    height:100%; 
+}
+
+ ul.meniu>li {
+    height: var(--inaltime-meniu);
+    overflow:hidden;
+    line-height: var(--inaltime-meniu);
+    vertical-align: middle;
+    border:var(--latime-bord-meniu) solid black;
+    text-align: center;
+
+}
+ul.meniu li{
+    width:100% !important;
+ } 
+
+ /* DESIGN MENIU HOVER */
+
+ul.submeniu
+{
+    list-style-type: none;
+    z-index:10px;
+    position:relative;
+    left:-1px;
+    padding:0;
+    margin:0;
+    display:none;
+
+}
+ /* SFARSIT DESIGN MENIU HOVER */
+
+
+ul.meniu li:hover ul{
+    transform-origin: left top;
+    animation-name: animatie_submeniu;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    opacity:0;
+    display:block;
+}
+
+ul.meniu li{
+    height: var(--inaltime-meniu);
+    border:var(--latime-bord-meniu) solid black;
+    width:var(--latime-buton);
+}
+
+ul.meniu li{
+    cursor:pointer;
+    background-color: var(--culoare-meniu);
+    transition:all 0.7s linear;
+}
+/* ZONA ANIMATII !! */
+
+ul.meniu>li:hover:nth-child(1),li:hover:nth-child(5),li:hover:nth-child(6){ 
+    background-color: var(--culoare-meniu-selectat);
+    animation: umbre;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    transform-origin: 50% 0;
+    display:block;
+    overflow:visible;
+}
+ul.meniu>li:hover:nth-child(3),li:hover:nth-child(4),li:hover:nth-child(2){ 
+    background-color: var(--culoare-meniu-selectat);
+    display:block;
+    overflow:visible;
+}
+
+ul.submeniu>li:hover{
+    background-color: var(--culoare-meniu-selectat);
+    display:block;
+    overflow:visible; 
+}
+
+li.meniu2:hover
+{
+    animation: none;
+}
+
+/* SFARSIT ZONA ANIMTATII */
+
+ul.meniu a{
+    color:black;
+    text-decoration:none;
+}
+
+nav{
+    height:var(--inaltime-meniu);
+    background-color: var(--culoare-meniu);
+    overflow: visible;
+    position: relative;
+    width:100%;
+    position:sticky;
+    top:0;
+}
+
+#hamburger, #ch-menu{
+    display:none;
+}
+
+@keyframes animatie_submeniu {
+    0%{
+        transform: scaleY(0);
+        
+    }
+    100%{
+        transform: scaleY(1);
+        
+        opacity:1;
+    }
+}
+
+
+:root {
+    --text_color:rgba(0, 0, 0, 0.581);
+    --color-primary: #f6aca2;
+    --color-secondary: #f49b90;
+    --color-tertiary: #f28b7d;
+    --color-quaternary: #f07a6a;
+    --color-quinary: #ee6352;
+}
+
+
+@keyframes umbre {
+    0% {
+      text-shadow: none;
+      text-shadow: 0px -20px 0 var(--text_color);
+    }
+    50% {
+      text-shadow: 0px -10px 0 var(--text_color);
+    }
+    100% {
+        text-shadow: 0px 0px 0 var(--text_color);
+      text-shadow: none;
+    }
+  }

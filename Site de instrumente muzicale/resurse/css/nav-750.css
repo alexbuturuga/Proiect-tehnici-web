@@ -1,0 +1,61 @@
+#hamburger{
+   display:block;
+   height:var(--inaltime-meniu);
+}
+#hamburger img{
+   height:100%;
+   width:auto;
+}
+
+ ul.meniu{
+    display:none;
+    animation-name:animatie-meniu;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    transform-origin: 50% 0;
+ }
+
+  #ch-menu:checked~ul.meniu{
+    display:block;
+ } 
+
+ ul.meniu li{
+    width:100% !important;
+ }
+ ul.meniu ul{
+    width: 100%;
+ }
+
+ ul.meniu li:hover ul{
+   transform-origin: left top;
+   animation-name: animatie_submeniu;
+   animation-duration: 0.5s;
+   animation-iteration-count: 1;
+   animation-timing-function: linear;
+   animation-fill-mode: forwards;
+   opacity:0;
+   display:block;
+}
+
+ @keyframes animatie-meniu{
+    0%{
+        transform: scaleY(0);
+    }
+    100%{
+        transform: scaleY(1);
+    }
+ }
+
+ @keyframes movingTopToBottom {
+   0% {
+     top: -15px;
+   }
+   95% {
+     top: 150px;
+   }
+   100% {
+     top: 165px;
+   }
+}

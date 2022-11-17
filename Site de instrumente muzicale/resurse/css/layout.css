@@ -1,0 +1,133 @@
+*
+{
+    margin:0;
+    padding:0;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    --margine-main:7%;
+    --background-pagina:#D5DEB4;
+    --culoare-text:black;
+    --main-background:#D5DEB4;
+    background-color: var(--background-pagina);
+    margin: 0;
+    color: var(--culoare-text);
+}
+
+header{
+    background-color:#FFF867;
+}
+
+body.dark{
+    --background-pagina:black;
+    --culoare-text: white;
+    --main-background:#D5DEB4;
+}
+.logo
+{
+    margin-left: 41%;
+    width: 300px;
+}
+
+
+main{
+    background-color: var(--main-background);
+    margin-left:var(--margine-main);
+    margin-right:var(--margine-main);
+}
+
+footer{
+    background-color: lightgray;
+}
+
+#grid-pagina{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: "z-welcome z-welcome z-welcome z-welcome"
+                         "z-anunturi z-anunturi z-anunturi z-anunturi"
+                         "z-blkfrid z-orar z-orar z-guitarplay"
+                         "z-cursuri z-c z-Intreb z-Intreb"
+                         "z-desprenoi z-desprenoi z-desprenoi z-desprenoi"
+                         
+                         
+
+            
+}
+
+#grid-pagina > *{
+    border: 2px solid black;
+    margin:0;
+    padding:0;
+}
+
+
+#welcome{
+    grid-area:z-welcome;
+}
+#anunturi{
+    grid-area:z-anunturi;
+}
+#desprenoi
+{
+    grid-area:z-desprenoi;
+}
+#orar
+{
+    grid-area:z-orar;
+}
+#blkfrid
+{
+    grid-area:z-blkfrid;
+}
+#guitarplay
+{
+    grid-area:z-guitarplay;
+}
+#cursuri
+{
+    grid-area:z-cursuri;
+}
+#Intreb
+{
+    grid-area:z-Intreb
+}
+
+
+@media screen {
+    #grid-pagina{
+        font-size: large;
+    }
+    .logo
+    {
+        margin-left: 41%;
+    }
+}
+
+@media screen and (max-width:1200px){
+    .logo
+    {
+        width:200px
+    }
+}
+@media screen and (max-width:700px){
+    .logo
+    {
+        width: 100px;
+    }
+}
+
+
+@media screen and (max-width:1200px){
+    #grid-pagina{
+        font-size: medium;
+        display:block;
+    }
+}
+@media screen and (max-width:700px){
+    #grid-pagina{
+        font-size: small;
+        display:block;
+    }
+    
+}

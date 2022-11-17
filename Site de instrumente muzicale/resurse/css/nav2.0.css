@@ -1,0 +1,40 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes animatie_submeniu {
+    0%
+    {
+        transform: scale(1,0);
+    }
+    100%
+    {
+        transform: scale(1,1);
+        opacity:1;
+    }
+}
+
+@keyframes umbre {
+    0% {
+      text-shadow: none;
+      text-shadow: 0px -20px 0 var(--text_color);
+    }
+    50% {
+      text-shadow: 0px -10px 0 var(--text_color);
+    }
+    100% {
+        text-shadow: 0px 0px 0 var(--text_color);
+      text-shadow: none;
+    }
+  }
