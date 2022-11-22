@@ -155,3 +155,35 @@ nav{
       text-shadow: none;
     }
   }
+
+  /* BUTON LINK-TOP */
+
+  #triunghi {
+    height: 0px;
+    width: 0;
+    display: inline-block;
+    border-bottom: 1.5rem solid grey;
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    vertical-align: top;
+    transform: translateY(30%);
+}
+#link-top {
+    position: fixed;
+    bottom: 0.3em;
+    opacity: 0.5;
+    left: 0.3em;
+    width: 3rem;
+    box-sizing: border-box;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    border: 1px solid grey;
+    border-radius: 50%;
+    background: rgb(220,220,220);
+}
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
