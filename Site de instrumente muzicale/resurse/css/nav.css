@@ -1,8 +1,8 @@
 body{
     --inaltime-meniu:30px;
     --latime-buton:16.6%;
-    --culoare-meniu: lightgray;
-    --culoare-meniu-selectat:#83fa6e;
+    --culoare-meniu: #D4E3ED;
+    --culoare-meniu-selectat:#A1897F;
     --latime-bord-meniu:1px;
 }
 
@@ -158,32 +158,106 @@ nav{
 
   /* BUTON LINK-TOP */
 
-  #triunghi {
+#triunghi {
     height: 0px;
-    width: 0;
+    width: 0px;
+    position: absolute;
+    top: 12%;
+    left: 9%;
+    /* margin: -50px 0 0 -50px; */
     display: inline-block;
-    border-bottom: 1.5rem solid grey;
+    border-bottom: 1.8rem solid grey;
     border-left: 1rem solid transparent;
     border-right: 1rem solid transparent;
-    vertical-align: top;
+    /* vertical-align: top; */
     transform: translateY(30%);
-}
+    transform:rotate(-45deg);
+    border-radius: 80%;
+} 
 #link-top {
     position: fixed;
-    bottom: 0.3em;
+    bottom: 0.7em;
     opacity: 0.5;
-    left: 0.3em;
-    width: 3rem;
+    left: 0.7em;
+    width: 2.7rem;
     box-sizing: border-box;
-    height: 3rem;
+    height: 2.7rem;
     line-height: 3rem;
     text-align: center;
     border: 1px solid grey;
-    border-radius: 50%;
+    /* border-radius: 50%; */
+    transform:rotate(45deg);
     background: rgb(220,220,220);
 }
+#link-top:hover{
+    transition-duration: 1s;
+    opacity:1;
+    background-color: lightgray;
+  }
+#link-top:hover #triunghi
+{
+    transition-duration: 1s;
+    border-bottom: 1.8rem solid white;
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+}
+
 a:-webkit-any-link {
     color: -webkit-link;
     cursor: pointer;
     text-decoration: underline;
 }
+
+/* SFARSIT BUTON LINK-TOP */
+
+/* START STILIZARE TABURI*/
+
+.flexbox {
+    display:flex;
+    position: relative;
+    left:30%
+}
+
+.rectangle_link{
+    
+    height: 37px;
+    width: 120px;
+    background-color: #C8D7E0;
+    /* box-shadow: #8C3037; */
+    border-style: double;
+    border:1.2px solid black;
+    border-left-width: 3px;
+    border-left-color: black;
+    box-shadow: 0,0,0,var(1.2px, solid black);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    position:relative;
+    text-align: center;
+    transition: width 0.5s;
+
+}
+
+.rectangle_link a{
+    position: relative;
+    top:-35%;
+    text-decoration: none;
+    text-align: center;
+    
+}
+
+.rectangle_link:hover {
+    
+    transition:1s;
+    background-color: #948D75;
+    
+}
+.inline{
+    left:10px;
+    
+}
+.videobox{
+    border-style: double;
+    border:1.2px solid black;
+}
+
+/* SFARSIT STILIZARE TABURI */

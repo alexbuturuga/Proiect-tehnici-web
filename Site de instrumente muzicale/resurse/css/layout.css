@@ -7,22 +7,22 @@
 }
 body{
     --margine-main:7%;
-    --background-pagina:#D5DEB4;
+    --background-pagina:#EDE5C7;
     --culoare-text:black;
-    --main-background:#D5DEB4;
+    --main-background:#fdffd773;
     background-color: var(--background-pagina);
     margin: 0;
     color: var(--culoare-text);
 }
 
 header{
-    background-color:#FFF867;
+    background-color: var(--background-pagina);
 }
 
 body.dark{
     --background-pagina:black;
     --culoare-text: white;
-    --main-background:#D5DEB4;
+    --main-background:#B3FAC3;
 }
 .logo
 {
