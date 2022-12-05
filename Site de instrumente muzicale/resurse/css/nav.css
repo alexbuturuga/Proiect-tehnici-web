@@ -113,6 +113,7 @@ nav{
     width:100%;
     position:sticky;
     top:0;
+    z-index: 100;
 }
 
 #hamburger, #ch-menu{
