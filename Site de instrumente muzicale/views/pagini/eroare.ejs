@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <title>Music Master - eroare</title>
+        <meta name="keywords" content="chitara, pian, oraga, acordeon, clarinet, fluier, intrumente muzicale, magazin de muzica" >
+        <meta name="description" content="Vanzare de instrumente muzicale - Site dedicat toturor pasionatiolor de muzica." >
+        <link rel="stylesheet" href="resurse/css/nav.css" type="text/css" />
+        <link rel="stylesheet" href="resurse/css/nav-750.css" type="text/css" media="screen and (max-width:750px)" />
+        <link rel="stylesheet" href="resurse/css/layout.css" type="text/css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+        <meta name="msapplication-TileColor" content="#da532c">
+        <link rel="stylesheet" type="text/css" href="resurse/css/eroare.css">
+        <meta name="theme-color" content="#ffffff">
+        <%- include("../fragmente/head.ejs") %>
+    </head>
+    <body>
+        
+    <%- include("../fragmente/header.ejs");  %> 
+
+    <main>
+        <div id="err-coloane">
+			<div id="err-imag">
+				<img src="<%- locals.imagine %>" />
+			</div>
+			<section>
+				<h2><%- locals.titlu %></h2>
+				<p><%- locals.text %></p>
+			</section>
+		</div>
+    </main>
+    
+    <%- include("../fragmente/footer.ejs");  %> 
+
+
+    </body>
+</html>

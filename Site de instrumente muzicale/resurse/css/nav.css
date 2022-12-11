@@ -6,6 +6,14 @@ body{
     --latime-bord-meniu:1px;
 }
 
+::cue{
+    background:rgba(255, 255, 255, 0.300);
+    
+    font-style:italic;
+    color: black;
+   }
+   
+
 ul.meniu{
     display:flex;
     padding:0;

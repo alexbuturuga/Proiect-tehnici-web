@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="resurse/css/nav.css" type="text/css" />
         <link rel="stylesheet" href="resurse/css/nav-750.css" type="text/css" media="screen and (max-width:750px)" />
         <link rel="stylesheet" href="resurse/css/layout.css" type="text/css" />
+        <link rel="stylesheet" href="resurse/css/print.css" type="text/css" media="print"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
@@ -15,7 +16,12 @@
     </head>
 
     <body>
+
         <%- include("../fragmente/header.ejs") %>
+
+        <p id="watermark"></p>
+        <p id="absolut"></p>
+
             <nav>
                 <label id="hamburger" for="ch-menu">
                     <img src="resurse/imagini/Hamburger_icon_alb.png" alt="menu">
@@ -68,10 +74,18 @@
                     <h2>Bun venit!</h2>
                     <p></p>Pe pagina noastra puteti gasi o mare varietate de instrumente muzicale, comenzile de peste 300 de lei primesc transportul gratuit.</p>
                 
+
                     <h2>Reduceri</h2>
-                    <article>
+                    <article id="noprint">
                         <h3 class="titlu">Super ofertele pe care nu le poti rata</h3>
                         <p><b>Music Master</b> oferă <b>reduceri de<ins> 20%!!</ins></b>  Orice chitara acustica are 20% reducere pana pe 1 noiembrie.</p>
+                        <video width="320" height="240" controls="controls">
+                            <source src="resurse/videoclipuri/videochitara.mp4" type="video/mp4">
+                            <source src="resurse/videoclipuri/videochitara.ogv" type="video/ogv">
+                            <track default src="resurse/videoclipuri/mesaje_ro.vtt" kind="captions" srclang="ro" label="romana" />
+                            <track  src="resurse/videoclipuri/mesaje_en.vtt" kind="captions" srclang="en" label="engleza" />                       
+                           </video>
+
                     </article>
                     <article>
                     </article>
@@ -86,10 +100,10 @@
                         <h3 class="titlu">Orice comanda plasata intre 10 si 20 noiembrie primeste transportul gratuit!</h3>
                     </article>
 
-                    <div class = "flexbox">
+                    <div id = "noprint" class = "flexbox">
                         <br/>
                        
-                        <div class = "inline">
+                        <div id = "noprint" class = "inline">
                             <div class = "rectangle_link">
                                 <br/>
                                 &nbsp; <a class = "ylink" target = "myiframe" href = "https://youtube.com/embed/KCZAr4br-KU">Chitara</a>
@@ -211,6 +225,16 @@
                     <details><summary>Ce se intampla cu contul in caz de retur</summary>
                         <p>Contul va pierde accesul la cursuri incepand cu urmatoarea luna.</p>
                     </details>
+                </section>
+                
+                <section id="galerie-statica">
+                    <h2>Galerie</h2>
+                    <div id="grid-galerie">
+                        <figure>
+                            <img src = "resurse/imagini/briose-frisca.png" >
+                            <figcaption>Briose</figcaption>
+                        </figure>
+                    </div>
                 </section>
 
                 <section id="desprenoi">
