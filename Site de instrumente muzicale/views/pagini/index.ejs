@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="resurse/css/nav.css" type="text/css" />
         <link rel="stylesheet" href="resurse/css/nav-750.css" type="text/css" media="screen and (max-width:750px)" />
         <link rel="stylesheet" href="resurse/css/layout.css" type="text/css" />
+        <link rel="stylesheet" href="resurse/css/galerie-statica.css" type="text/css" />
+        <link rel="stylesheet" href="resurse/css/galerie-statica-500.css" type="text/css" media="screen and (max-width:750px)" />
         <link rel="stylesheet" href="resurse/css/print.css" type="text/css" media="print"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
         <meta name="msapplication-TileColor" content="#da532c">
@@ -230,10 +232,12 @@
                 <section id="galerie-statica">
                     <h2>Galerie</h2>
                     <div id="grid-galerie">
+                        <%  for(let imag of locals.imagini) { %>
                         <figure>
-                            <img src = "resurse/imagini/briose-frisca.png" >
-                            <figcaption>Briose</figcaption>
+                            <img src = "<%- imag.fisier %>" alt = "imagine" >
+                            <figcaption>"<%- imag.descriere %>"</figcaption>
                         </figure>
+                        <% } %>
                     </div>
                 </section>
 

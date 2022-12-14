@@ -59,7 +59,7 @@ app.get("/*", function(req, res){
     // res.sendFile(__dirname+ "/index.html");
     if(req.url == "/home")
         req.url = "/index";
-    res.render("pagini" + req.url, function(err,rezRandare)
+    res.render("pagini" + req.url, {function(err,rezRandare)
     {
         console.log("Eroare", err);
         console.log("Rezulatat randare", rezRandare);
@@ -79,7 +79,7 @@ app.get("/*", function(req, res){
             res.send(rezRandare);
         }
         
-    });
+    },imagini:obGlobal.imagini});
     
 })
 
