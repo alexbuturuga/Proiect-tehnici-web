@@ -1,6 +1,7 @@
 const { text } = require("express");
 const express = require("express");
 const fs=require("fs");
+const sharp=require("sharp");
 
 app = express();
 app.set("view engine", "ejs");
@@ -16,11 +17,23 @@ function createImages(){
     var continutFisier=fs.readFileSync(__dirname+"/resurse/json/galerie.json").toString("utf8");
     //console.log(continutFisier);
     var obiect=JSON.parse(continutFisier);
-    obGlobal.imagini = obiect.imagini;
+    var dim_mediu=400;
+    var dim_mic=200;
+
+    obGlobal.imagini=obiect.imagini;
+
     obGlobal.imagini.forEach(function (elem){
-        elem.fisier = obiect.cale_galerie+ "/" + elem.fisier;
+        [numeFisier,extensie]=elem.fisier.split(".")   //"briose-frisca.png" ->["briose-frisca", "png"]
+        if(!fs.existsSync(obiect.cale_galerie+"/mediu/")){
+            fs.mkdirSync(obiect.cale_galerie+"/mediu/");
+        }
+        elem.fisier_mediu=obiect.cale_galerie+"/mediu/"+numeFisier+".webp"
+        elem.fisier=obiect.cale_galerie+"/"+elem.fisier;
+        sharp(__dirname+"/"+elem.fisier).resize(dim_mediu).toFile(__dirname+"/"+elem.fisier_mediu);
     });
-   // console.log(obGlobal.imagini);
+
+
+    console.log(obGlobal.imagini);
 }
 createImages();
 
