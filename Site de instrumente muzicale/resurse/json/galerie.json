@@ -2,36 +2,62 @@
 	"cale_galerie":"resurse/imagini/galerie",
 	"imagini": [
 		{
-			"fisier":"briose-frisca.png",
-			"descriere":"Brioșe",
+			"fisier":"Chitara.png",
+			"descriere":"Chitara",
 			"luni":["martie","februarie","iunie"]
 		},
 		{
-			"fisier":"clatite.png",
-			"descriere":"Clătite cu dulceață",
+			"fisier":"Pian.png",
+			"descriere":"Pian",
 			"luni":["ianuarie","februarie","iunie"]
 			
 		},
 		{
-			"fisier":"gogosi.png",
-			"descriere":"Gogoși glazurate",
+			"fisier":"Vioara.png",
+			"descriere":"Vioara",
 			"luni":["ianuarie","februarie","iunie","martie"]
-		},
+		}
+		,
 		{
-			"fisier":"tort-scortisoara.png",
-			"descriere":"Tort cu scorțisoară"
-		},
+			"fisier":"Vioara.png",
+			"descriere":"Vioara",
+			"luni":["ianuarie","februarie","iunie","martie"]
+		}
+		,
 		{
-			"fisier":"prajitura-ciocolata.png",
-			"descriere":"Prăjitură cu ciocolată"
-		},
+			"fisier":"Vioara.png",
+			"descriere":"Vioara",
+			"luni":["ianuarie","februarie","iunie","martie"]
+		}
+		,
 		{
-			"fisier":"tarta-afine.png",
-			"descriere":"Tartă cu afine"
-		},
+			"fisier":"Vioara.png",
+			"descriere":"Vioara",
+			"luni":["ianuarie","februarie","iunie","martie"]
+		}
+		,
 		{
-			"fisier":"tort-trandafiri.png",
-			"descriere":"Tort special"
+			"fisier":"Vioara.png",
+			"descriere":"Vioara",
+			"luni":["ianuarie","februarie","iunie","martie"]
+		}
+		,
+		{
+			"fisier":"Vioara.png",
+			"descriere":"Vioara",
+			"luni":["ianuarie","februarie","iunie","martie"]
+		}
+		,
+		{
+			"fisier":"Vioara.png",
+			"descriere":"Vioara",
+			"luni":["ianuarie","februarie","iunie","martie"]
+		}
+		,
+		{
+			"fisier":"Vioara.png",
+			"descriere":"Vioara",
+			"luni":["ianuarie","februarie","iunie","martie"]
 		}
 	]
 }
