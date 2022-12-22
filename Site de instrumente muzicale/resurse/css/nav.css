@@ -351,3 +351,36 @@ tfoot td,th{
 }
 
 /*Sfarsit shadow galerie*/
+
+/*Etapa 4 cerinta 5*/
+
+#imagine{
+position: relative;
+background-image: url(https://cdn.shopify.com/s/files/1/0338/0169/9387/collections/TL-online-store-cata-banner-guitars_1200x1200.jpg?v=1602054494);
+background-size: cover;
+width: 500px;
+height: 500px;
+filter: brightness(200%) grayscale(0);
+transition: all 2s linear;
+}s
+#imagine:before {
+    background-color: rgb(205,0,255);
+    mix-blend-mode: darken;
+    
+}
+
+#imagine:after {
+    background-color: rgb(0,0,255);
+    mix-blend-mode: lighten;
+}
+
+#imagine:after, #imagine:before {
+    content: " ";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: all 2s linear;;
+   
+}

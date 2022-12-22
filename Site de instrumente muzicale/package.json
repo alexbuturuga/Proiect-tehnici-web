@@ -2,6 +2,8 @@
   "dependencies": {
     "ejs": "^3.1.8",
     "express": "^4.18.2",
+    "sas": "^3.0.4",
+    "sass": "^1.57.0",
     "sharp": "^0.31.2"
   },
   "name": "music-master",

@@ -4,60 +4,60 @@
 		{
 			"fisier":"Chitara.png",
 			"descriere":"Chitara",
-			"luni":["martie","februarie","iunie"]
+			"timp": "09:00-12:00"
 		},
 		{
 			"fisier":"Pian.png",
 			"descriere":"Pian",
-			"luni":["ianuarie","februarie","iunie"]
+			"timp": "10:00-12:00"
 			
 		},
 		{
 			"fisier":"Vioara.png",
 			"descriere":"Vioara",
-			"luni":["ianuarie","februarie","iunie","martie"]
+			"timp": "06:00-12:00"
 		}
 		,
 		{
 			"fisier":"Vioara.png",
-			"descriere":"Vioara",
-			"luni":["ianuarie","februarie","iunie","martie"]
+			"descriere":"Vioara"
+		
 		}
 		,
 		{
 			"fisier":"Vioara.png",
-			"descriere":"Vioara",
-			"luni":["ianuarie","februarie","iunie","martie"]
+			"descriere":"Vioara"
+			
 		}
 		,
 		{
 			"fisier":"Vioara.png",
-			"descriere":"Vioara",
-			"luni":["ianuarie","februarie","iunie","martie"]
+			"descriere":"Vioara"
+			
 		}
 		,
 		{
 			"fisier":"Vioara.png",
-			"descriere":"Vioara",
-			"luni":["ianuarie","februarie","iunie","martie"]
+			"descriere":"Vioara"
+			
 		}
 		,
 		{
 			"fisier":"Vioara.png",
-			"descriere":"Vioara",
-			"luni":["ianuarie","februarie","iunie","martie"]
+			"descriere":"Vioara"
+			
 		}
 		,
 		{
 			"fisier":"Vioara.png",
-			"descriere":"Vioara",
-			"luni":["ianuarie","februarie","iunie","martie"]
+			"descriere":"Vioara"
+			
 		}
 		,
 		{
 			"fisier":"Vioara.png",
-			"descriere":"Vioara",
-			"luni":["ianuarie","februarie","iunie","martie"]
+			"descriere":"Vioara"
+			
 		}
 	]
 }
