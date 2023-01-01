@@ -4,10 +4,40 @@ const fs=require("fs");
 const sharp=require("sharp");
 const ejs = require("ejs");
 const sass = require("sass");
+
+cssbootstrap=sass.compile(__dirname+"/resurse/scss/customizare-boostrap.scss",{sourceMap:true});
+
+fs.writeFileSync(__dirname+"/resurse/css/bibleoteci/bootstrap-custom.css", cssbootstrap.css)
+
+/*
+const {Client}=require("pg");
+var client= new Client({database:"tehniciweb",
+        user:"George", 
+        password:"1983", 
+        host:"localhost", 
+        port:5432});
+client.connect();
+
+client.query(
+   'Select * from tabel_test', (err, rez) =>
+   {
+    if(!err)
+    {
+        console.log(rez.rows);
+    }else
+    {
+        console.log(err.message);
+    }
+    client.end;
+   }
+)
+*/
+
 app = express();
 app.set("view engine", "ejs");
 
 app.use("/resurse", express.static(__dirname+"/resurse"));
+app.use("/node_modules", express.static(__dirname+"/node_modules"));
 
 obGlobal={
     erori:null,

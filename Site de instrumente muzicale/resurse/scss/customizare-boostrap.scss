@@ -1,0 +1,12 @@
+
+@use '../../node_modules/bootstrap/scss/bootstrap.scss' with (
+    $primary: purple,
+    $grid-breakpoints: (
+    xs: 0,
+    sm: 500px,
+    md: 750px,
+    lg: 900px,
+    xl: 1200px,
+    xxl: 1400px
+) 
+  );

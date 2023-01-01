@@ -41,14 +41,14 @@ footer{
     background-color: lightgray;
 }
 
-#grid-pagina{
-    display:grid;
-    grid-template-columns: repeat(4,1fr);
+#grid-pagina {
+    display:grid ; 
+    grid-template-columns: repeat(4,1fr) ;
     grid-template-areas: "z-welcome z-welcome z-welcome z-welcome"
                          "z-anunturi z-anunturi z-anunturi z-anunturi"
                          "z-blkfrid z-orar z-orar z-guitarplay"
                          "z-cursuri z-c z-Intreb z-Intreb"
-                         "z-desprenoi z-desprenoi z-desprenoi z-desprenoi"
+                         "z-desprenoi z-desprenoi z-desprenoi z-desprenoi" 
                          
                          
 
@@ -91,6 +91,14 @@ footer{
 #Intreb
 {
     grid-area:z-Intreb
+}
+.imaginemeniu
+{
+    width: 300px;  
+    height: auto;  
+    text-align: center;  
+    padding: 15px;  
+     
 }
 
 
