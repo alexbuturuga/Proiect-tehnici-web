@@ -1,37 +1,46 @@
 <!DOCTYPE html>
-<html  lang="ro">
+<html lang="ro">
     <head>
-        <meta name="description" content="Cofetaria Dulcelind ofera prajituri, torturi, produse de patiserie cu optiunea de achizitie online si livrare prin curier.">
-        <meta name="keywords" content="cofetarie, Dulcelind, prajituri, torturi, dulce, pateuri, produse">
-        
-        <title>Cofetăria Dulcelind - home</title>
-        <%- include("../fragmente/head") %>     
+        <title>Music Master</title>
+        <meta name="keywords" content="chitara, pian, oraga, acordeon, clarinet, fluier, intrumente muzicale, magazin de muzica" >
+        <meta name="description" content="Vanzare de instrumente muzicale - Site dedicat toturor pasionatiolor de muzica." >
+        <link rel="stylesheet" href="/resurse/css/nav.css" type="text/css" />
+        <link rel="stylesheet" href="/resurse/css/nav-750.css" type="text/css" media="screen and (max-width:750px)" />
+        <link rel="stylesheet" href="/resurse/css/layout.css" type="text/css" />
+        <link rel="stylesheet" href="/resurse/css/galerie-statica.css" type="text/css"/>
+        <link rel="stylesheet" href="/resurse/css/galerie-animata.css" type="text/css"/>
+        <link rel="stylesheet" href="/resurse/css/print.css" type="text/css" media="print"/>
+        <link rel="stylesheet" href="/https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
         <link href="/resurse/css/produs.css" type="text/css" rel="stylesheet" />
+        <%- include("../fragmente/head.ejs") %>   
+        
     </head>
     <body>
-    <%- include("../fragmente/header") %>
+        <header id="h1">
+            <figure>
+                <a href="/home" ><img class="logo" src="/resurse/imagini/logo1.png"/></a>
+            </figure>
+        </header>
 
     <main>
         <section>
             <h2>Pagină produs</h2>
                 <article id="art-produs">
-                    <h3><span class="nume"><%- locals.prod.nume %></span></h3>
-                    <p>Pret: <span class="pret"><%- locals.prod.pret %> </span></p>
-                    <p>Descriere: <span class="descriere"><%- locals.prod.descriere %> </span></p>
-                    <p>Ingrediente: <span class="ingrediente"><%- locals.prod.ingrediente %> </span></p>
-                    <p>Calorii: <span class="calorii"><%- locals.prod.calorii %> </span></p>
-                    <p>Gramaj: <span class="gramaj"><%- locals.prod.gramaj %> </span></p>
-                    <p>Categorie: <span class="categorie"><%- locals.prod.categorie %> </span></p>
-                    <p>Pentru diabetici: <span class="pt_diabetici"><%- locals.prod.pt_diabetici %> </span></p>
-                    <p>Data adăugare: <span class="categorie"><%- locals.prod.data_adaugare %> </span></p>
+                    <%console.log(locals.prod);console.log(locals.prod[0]);%>
+                    <h3><span class="nume"><%- locals.prod[0].nume %></span></h3>
+                    <p>Id: <span class="pret"><%- locals.prod[0].id %> </span></p>
+                    <p>Pret: <span class="pret"><%- locals.prod[0].pret %> </span></p>
+                    <p>Categorie: <span class="categorie"><%- locals.prod[0].categorie %> </span></p>
                     <figure class="imag-produs">
-                        <img  src="/resurse/imagini/produse/<%- locals.prod.imagine %>" alt="[imagine <%- locals.prod.nume %>]" />
+                        <img  src="/resurse/imagini/produse/<%- locals.prod[0].imagine %>" alt="[imagine <%- locals.prod[0].nume %>]" />
                     </figure>    
                 </article>
             
         </section>
     </main>
 
-    <%- include("../fragmente/footer") %>
+    <%- include("../fragmente/footer.ejs") %>
     </body>
 </html>

@@ -5,33 +5,33 @@ const sharp=require("sharp");
 const ejs = require("ejs");
 const sass = require("sass");
 
+const mysql = require("mysql");
+
+const db = mysql.createConnection({
+    host    : 'localhost',
+    user    : 'george',
+    password: '12345',
+    database: 'magazin'
+});
+
+db.connect((err) => {
+    if(err){
+        throw err;
+    }
+    console.log('MySql Connected...');
+})
+
+
+
+
+
 cssbootstrap=sass.compile(__dirname+"/resurse/scss/customizare-boostrap.scss",{sourceMap:true});
 
 fs.writeFileSync(__dirname+"/resurse/css/bibleoteci/bootstrap-custom.css", cssbootstrap.css)
 
-/*
-const {Client}=require("pg");
-var client= new Client({database:"tehniciweb",
-        user:"George", 
-        password:"1983", 
-        host:"localhost", 
-        port:5432});
-client.connect();
 
-client.query(
-   'Select * from tabel_test', (err, rez) =>
-   {
-    if(!err)
-    {
-        console.log(rez.rows);
-    }else
-    {
-        console.log(err.message);
-    }
-    client.end;
-   }
-)
-*/
+
+
 
 app = express();
 app.set("view engine", "ejs");
@@ -44,6 +44,70 @@ obGlobal={
     imagini:null
 }
 
+
+
+app.get('/select', (req, res) =>{
+    let sql = 'Select * from test';
+    let query = db.query(sql, (err,result)=>{
+        if(err) throw err;
+        console.log(result);
+        result.send('Post fetched...');
+    });
+})
+
+// app.get("/produse", function(req,res){
+//     db.query("select * from produse", function(err,rez){
+//         if(err){
+//         console.log(err);
+//         renderError(res,2);
+//         }
+//         else
+//         res.render("pagini/produse", {produse:rez.rows});
+//     })
+    
+
+// })
+app.get('/produse', (req, res) =>{
+    let sql = 'Select * from produse';
+    let query = db.query(sql, (err,result)=>{
+        if(err) {
+            renderError(res,2);
+            throw err;
+        }
+        else
+        {
+        
+        // for( let prod of result)
+        //     {
+        //         console.log(prod.id)
+        //     }
+        let n = result.length;
+        console.log(n);
+        res.render("pagini/produse", {produse:[result], optiuni:[],n:n});
+        }
+    });
+})
+
+app.get('/produs/:id', (req, res) =>{
+    console.log(req.params.id);
+    let sql = 'Select * from produse where id='+req.params.id;
+    let query = db.query(sql, (err,result)=>{
+        if(err) {
+            renderError(res,2);
+            throw err;
+        }
+        else
+        {
+        
+        // for( let prod of result)
+        //     {
+        //         console.log(prod.id)
+        //     }
+        console.log(result[0]);
+        res.render("pagini/produs", {prod:[result[0]]});
+        }
+    });
+})
 function createImages(){
     var continutFisier=fs.readFileSync(__dirname+"/resurse/json/galerie.json").toString("utf8");
     //console.log(continutFisier);
@@ -161,6 +225,8 @@ app.get("/*", function(req, res){
 
 
 console.log("Hello world!");
-
-app.listen(8080);
+app.listen("8080", () =>
+{
+    console.log("Server started on port 8080");
+})
 console.log("Srv a pornit!");
