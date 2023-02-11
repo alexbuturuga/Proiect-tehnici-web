@@ -28,9 +28,6 @@
    
    #grid-galerie>figure:nth-child(1)
   {
-    <%
-    var d = new Date();
-    %>
     grid-area: 1/1/1/1;
   } 
   #grid-galerie>figure:nth-child(2)

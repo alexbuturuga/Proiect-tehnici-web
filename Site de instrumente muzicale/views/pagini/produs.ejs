@@ -31,8 +31,12 @@
                     <%console.log(locals.prod);console.log(locals.prod[0]);%>
                     <h3><span class="nume"><%- locals.prod[0].nume %></span></h3>
                     <p>Id: <span class="pret"><%- locals.prod[0].id %> </span></p>
-                    <p>Pret: <span class="pret"><%- locals.prod[0].pret %> </span></p>
+                    <p>Culoare: <span class="pret"><%- locals.prod[0].culoare%> </span></p>
+                    <p>Pret: <span class="pret"><%- locals.prod[0].pret %></span> Lei</p>
                     <p>Categorie: <span class="categorie"><%- locals.prod[0].categorie %> </span></p>
+                    <p>Acest produs beneficiaza de: <span class="pret"><%- locals.prod[0].garantie %> </span> ani garantie!</p>
+                    <p>Descriere: <span class="pret"><%- locals.prod[0].Descriere %> </span></p>
+                    <p>Data_fabricatiei: <span class="pret"><%- locals.prod[0].data_fabricatie %> </span></p>
                     <figure class="imag-produs">
                         <img  src="/resurse/imagini/produse/<%- locals.prod[0].imagine %>" alt="[imagine <%- locals.prod[0].nume %>]" />
                     </figure>    

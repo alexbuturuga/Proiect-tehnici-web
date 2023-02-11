@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
         <meta name="msapplication-TileColor" content="#da532c">
         <link rel="stylesheet" href="/resurse/css/produse.css" type="text/css" />
-
+        
         <%- include("../fragmente/head.ejs") %>     
         <script type="text/javascript" src=/resurse/js/produse.js></script>
     </head>
@@ -39,22 +39,34 @@
             </label>
         </div> -->
 
-
-        <label> Pret minim: <input type="range" id="inp-pret" value="0" min="0"  max="70"> <span id="infoRange">(0)</span></label>
-        <label>Select simplu:
+                            
+        <label> Pret minim: <input type="range" id="inp-pret" value="0" min="0"  max="20000" onchange="updateTextInput(this.value);"><span id="infoRange"></span></label>
+                            <output id="textInput" value="500"></output>
+        <label> Pret maxim: <input type="range" id="inp-pret2" value="20000" min="0"  max="20000" onchange="updateTextInput1(this.value);"><span id="infoRange1"></span></label>
+                            <output id="textInput1" value="500"></output>
+        <label>
+            <p>
+                <label>
+                    Cautare: <input type="text" name="Cautare" id="inp-nume"  value="" >
+                </label>
+            </p>
              <select id="inp-categorie">
                 <option id="sel-toate" selected value="toate">toate</option>
-                <% for (let opt of locals.optiuni) { %>
-                    <option value="<%- opt.unnest %>"><%- opt.unnest %> </option>
-                <% } %>
+                <%let z=0;%>
+                <%for(let j=0;j<locals.n;j++){%>
+                <% for (let prod of locals.produse) { %>
+                    <option value="<%- prod[z].categorie %>"><%- prod[z].categorie %> </option>
+                <% z=z+1;}}%>
+
             </select> 
         </label>
         <p>
-        <button id="filtrare">Filtreaza</button> 
-        <button id="resetare">Reseteaza</button><br/>
-        <button id="sortCrescNume">Sorteaza crescator dupa pret si nume</button>
-        <button id="sortDescrescNume">Sorteaza descrescator dupa pret si nume</button>
-        
+            <div class="constine_butonas">
+        <button id="filtrare" class="butonas">Filtreaza</button> 
+        <button id="resetare" class="butonas">Reseteaza</button><br/>
+        <button id="sortCrescNume" class="butonas">Sorteaza crescator dupa pret si nume</button>
+        <button id="sortDescrescNume" class="butonas">Sorteaza descrescator dupa pret si nume</button>
+            </div>
         </p>
         
         <p id="p-suma">Apăsați Alt+"c" pentru suma preturilor produselor afișate. </p>
@@ -64,15 +76,17 @@
                 
                 <%let i=0;%>
                 <%for(let j=0;j<locals.n;j++){%>
-                <% for( let prod of locals.produse) {console.log(prod[i].id) %>
+                <% for( let prod of locals.produse) {console.log(prod[i].nume) %>
                     <article class="produs" >
-                        <h3 class="nume">Nume: <a href="/produs/<%-prod[i].id %>" ><span class="val-nume"><% -prod[i].nume%></span></a></h3>
+                        <h3 class="nume"> <span class="val-nume"><%- prod[i].nume%></span></a></h3>
                         
                         <div class="info-prod">
-                            <p class="pret">Pret: <span class="val-pret"><%- prod[i].pret%></span></p>
+                            <p class="pret">Pret: <span class="val-pret"><%- prod[i].pret%></span> Lei</p>
                         </div>
-                        
-                        <p class="categorie">Categorie:<span class="val-categorie"><%- prod[i].categorie%></span></p>
+                        <div class = "specificatii">
+                            <p class="top">Categorie:<span class="val-categorie"><%- prod[i].categorie%></span></p>
+                            <p class="top">Culoare default:<span class="val-categorie"><%- prod[i].culoare%></span></p>
+                        </div>
                         <figure>
                             <a href="/produs/<%-prod[i].id %>" ><img src="/resurse/imagini/produse/<%- prod[i].imagine %>" style="width:50%;height:auto;" alt="[imagine <%- prod[i].nume %>]" /></a>
                         </figure>

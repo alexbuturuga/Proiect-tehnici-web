@@ -9,7 +9,7 @@
         {
             "identificator":404,
             "status":true,
-            "titlu":"404 - N-am, bre!",
+            "titlu":"404 - Pagina nu a fost gasita!",
             "text": "Pagina pe care o cauti nu a fost gasita!",
             "imagine":"lupa.png"
         },
@@ -34,6 +34,14 @@
             "status":false,
             "titlu":"Eroare baza date",
             "text": "Reveniti mai tarziu!",
+            "imagine":"interzis.png"
+        },
+
+        {
+            "identificator":3,
+            "status":false,
+            "titlu":"Date gresite",
+            "text": "Verificati datele!",
             "imagine":"interzis.png"
         }
     ]

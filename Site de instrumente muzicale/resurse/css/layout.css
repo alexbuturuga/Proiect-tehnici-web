@@ -15,14 +15,15 @@ body{
     color: var(--culoare-text);
 }
 
+
 header{
     background-color: var(--background-pagina);
 }
 
 body.dark{
-    --background-pagina:black;
-    --culoare-text: white;
-    --main-background:#B3FAC3;
+    --background-pagina:#5a574bc9;
+    --culoare-text:rgb(255, 255, 255);
+    --main-background:rgba(17, 17, 3, 0.451);
 }
 .logo
 {

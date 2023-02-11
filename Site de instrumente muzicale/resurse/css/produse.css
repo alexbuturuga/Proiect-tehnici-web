@@ -51,6 +51,24 @@ main{
     font-weight:bold;
 }
 
+.top{
+
+    padding: 15px;
+    justify-content: center;
+  
+  /* add a gap */
+    column-gap: 20px;
+    text-align:center;
+    font-weight:bold;
+    
+}
+
+.specificatii
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .info-produse{
     background-color: var(--cl-marcare);
     padding:0.2rem;
